@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText num1,num2;
     TextView textView;
-    Button sumbtn;
+    Button sumbtn,multibtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +22,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         sumbtn = findViewById(R.id.sumbtn);
+        multibtn = findViewById(R.id.multibtn);
         textView = findViewById(R.id.result);
          num1 = findViewById(R.id.one);
          num2 = findViewById(R.id.two);
 
+         multibtn.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 double number1 = Double.parseDouble(num1.getText().toString());
+                 double number2 = Double.parseDouble(num2.getText().toString());
+                 double multiply = number1 * number2;
+                 textView.setText("The result = "+String.valueOf(multiply));
+             }
+         });
 
         sumbtn.setOnClickListener(new View.OnClickListener() {
             @Override
