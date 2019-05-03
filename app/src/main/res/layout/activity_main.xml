@@ -37,9 +37,19 @@
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/multibtn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="216dp"
+        android:layout_marginTop="43dp"
         android:text="Result = 0" />
+
+    <Button
+        android:id="@+id/multibtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sumbtn"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="25dp"
+        android:text="Multiply" />
 
 </RelativeLayout>
